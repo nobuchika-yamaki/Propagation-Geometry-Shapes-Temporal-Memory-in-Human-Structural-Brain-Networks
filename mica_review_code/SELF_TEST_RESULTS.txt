@@ -1,0 +1,77 @@
+Self-test audit of frozen manuscript analysis scripts
+Validated with Python 3.13.5
+
+05_MICA_MICS_GEOMETRY_SPECIFIC_SCALE_VALIDATION.py
+  all_pass: true
+  legacy_216_to_200: true
+  triangular_symmetrization_preserves_values: true
+  fixed_shuffle_continuous_multiset: true
+  pair-preserving integer delay tests (S=1,8,64): true
+  equal_weight_normalization: true
+  empirical_weight_normalization: true
+  simulation_deterministic: true
+  simulation_finite: true
+  ols_exact: true
+  validation_tie_smallest_scale_not_test: true
+  holm_valid: true
+  source_fraction_maps_to_k25: true
+  numba_available: true
+
+06_MICA_MICS_MEMORY_DISTRIBUTION_AND_FALSIFICATION.py
+  all_pass: true
+  iid_reproducible: true
+  iid_binary: true
+  iid_lag1_near_zero: true
+  iid_noise_nonzero: true
+  M1_identity: true
+  mass_quantiles: true
+  slope_log2: true
+  rho_log2: true
+  holm: true
+
+07_MICA_MICS_MEMORY_MAXLAG1024_EXTENSION_v1_3.py
+  all_pass: true
+  core_version: true
+  core_self_test: true
+  prefix_nonnegative: true
+  prefix_covers_recurrence: true
+  replicate_ids_match_core05: true
+  null_r2_reference: true
+  old_sequence_preserved_exact: true
+  target_index_valid: true
+  batched_matches_naive: true
+  batched_max_abs_error: 4.163336342344337e-17
+  checkpoint_roundtrip: true
+
+08_MICA_MICS_EMPIRICAL_SC_WEIGHT_ROBUSTNESS_v1_2.py
+  all_pass: true
+  core_version: true
+  core_self_test: true
+  replicate_ids: true
+  checkpoint_signature_compatible_v1_1: true
+  prefix_valid: true
+  null_reference: true
+  blas_thread_caps: true
+  exact_delay_dedup: true
+  empirical_weight_normalization: true
+  batched_matches_naive: true
+  batched_max_abs_error: 4.163336342344337e-17
+  checkpoint_roundtrip: true
+
+09_MICA_MICS_CONDUCTION_COMPENSATION_ROBUSTNESS_v1_1.py
+  all_pass: true
+  core_version: true
+  core_self_test: true
+  beta0_identity_continuous: true
+  beta1_equal_continuous: true
+  compensation_compresses_continuous_sd: true
+  replicate_ids: true
+  prefix_valid: true
+  blas_thread_caps: true
+  beta0_delay_identity: true
+  beta1_delay_equal: true
+  delay_dedup_preserves_all_beta_scale_labels: true
+  delay_dedup_not_expansive: true
+  batched_matches_naive: true
+  batched_max_abs_error: 4.336808689942018e-18
+  checkpoint_roundtrip: true
